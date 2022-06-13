@@ -1,7 +1,7 @@
 const PictureDisplay = ({ picture }) => {
     return (
         <div>
-        <img src= {picture.message} alt='cute dog I swear'/>
+        <img src= {picture?.message} alt='cute dog I swear'/>
         </div>
     )
 }

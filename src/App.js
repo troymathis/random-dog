@@ -1,6 +1,6 @@
 import {setState, useState, useEffect} from 'react';
 import Header from './components/Header';
-import Form from './components/Form';
+import Button from './components/Button';
 import './App.css';
 import PictureDisplay from './components/PictureDisplay';
 
@@ -11,14 +11,11 @@ function App() {
     const data = await response.json();
     setPicture(data);
   };
-    useEffect(() => {
-      getPicture();
 
-    }, []);
   return (
     <div className="App">
       <Header></Header>
-      <Form picturePull = {getPicture}/>
+      <Button handleClick = {getPicture}/>
       <PictureDisplay picture={picture} />
     </div>
   );
